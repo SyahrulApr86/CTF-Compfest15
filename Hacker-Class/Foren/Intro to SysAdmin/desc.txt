@@ -1,0 +1,44 @@
+[416 pts] Intro to SysAdmin
+Description
+Author: rorre
+
+Welcome to the world of sysadmin! Our postgresql server was hacked, can you check out what's happening here?
+
+Requirements:
+
+A linux system! VM or WSL (should) work too
+
+Getting into the system:
+
+Open your terminal
+Enter your root shell
+Extract the tar file with tar -xf debian.tar.gz
+Set the root variable environment for convenience export DEBROOT=$PWD/debian
+WARNING
+
+Please ENSURE that the variable is SET CORRECTLY, or else your system might be broken! You can check this by running echo $DEBROOT and see if the variable has been indeed set.
+
+Set up all the required Virtual Kernel FS
+mount -v --bind /dev $DEBROOT/dev
+mount -v --bind /dev/pts $DEBROOT/dev/pts
+mount -vt proc proc $DEBROOT/proc
+mount -vt sysfs sysfs $DEBROOT/sys
+mount -vt tmpfs tmpfs $DEBROOT/run
+Go inside the chroot
+chroot "$DEBROOT" /usr/bin/env -i   \
+    HOME=/root                      \
+    TERM="$TERM"                    \
+    PS1='(root chroot) \u:\w\$ '    \
+    PATH=/usr/bin:/usr/sbin         \
+    /bin/bash --login
+If you see that you are root, now you are in the chroot environment. Happy hacking!
+
+attachments:
+https://cdn.discordapp.com/attachments/1107668994477019218/1139898418823712781/debian.tar.gz
+or
+https://drive.google.com/file/d/10h9sAoVqDToxbAKSiaop0Mdf49pyTQ5o/view?usp=sharing
+Hints
+# The hacker attacks postgresql, maybe check there?
+
+# Try looking at all the databases and tables
+
