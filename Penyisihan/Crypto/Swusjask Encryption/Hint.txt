@@ -1,0 +1,5 @@
+Like RSA, the key behind decryption is to find order of group. Can you find it?
+
+consider isomorphism (mapping) between this group and multiplicative group modulo polynomial with degree 2 and deduce the order
+
+https://ctf.compfest.id/files/3d47c8e4e2fa6e3ebc3d0da0704e1103/png.png

@@ -1,0 +1,3 @@
+Browser's devtools is an amazing tool. Maybe look at the source and network tab to figure things out?
+
+Try looking at the lifecycle of the chat, it's also using a common cryptography technique in CTF challenges.

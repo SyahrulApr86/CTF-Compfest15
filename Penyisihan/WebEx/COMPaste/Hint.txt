@@ -1,0 +1,3 @@
+/app/files # ls B1NHZ27SVYV6IJQMD25OT6Y4BPGQ9UID.txt flag*
+B1NHZ27SVYV6IJQMD25OT6Y4BPGQ9UID.txt  flag                                  flag.txt
+/app/files # 

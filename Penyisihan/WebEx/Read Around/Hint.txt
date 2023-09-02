@@ -1,0 +1,3 @@
+The HTTP spec says that we may not fully trust the client's headers, one of them just so happen to cause side effects due to faulty implementation, what's this header?
+
+Does the server already adhere to this spec? https://httpwg.org/specs/rfc9110.html#field.content-length

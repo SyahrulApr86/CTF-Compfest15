@@ -1,0 +1,8 @@
+Perhaps parsing the torrent will help you
+
+ever wonder which type of hash is used for the torrent pieces?
+
+"bang, seriusan brute force kah? lama banget gak sih" nggak kok, asal tau mana aja yang harus di brute force. kuncinya sabar mas, "sabar"
+
+
+You do know that each particular unicode charsets may have different size (in byte) right? right??

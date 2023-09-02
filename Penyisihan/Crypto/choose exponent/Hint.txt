@@ -1,0 +1,3 @@
+first recover n. if you have a = b (mod n), then you have n | a - b. try using gcd and get n.
+
+https://latex.codecogs.com/png.image?%5Cdpi%7B110%7D%5Cbg%7Bwhite%7Dm%5E%7Bab%7D%5Cequiv(m%5Ea)%5Eb%5Cmod&space;n

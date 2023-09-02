@@ -1,0 +1,5 @@
+Don't rely too much on decompiler. Sometimes, low-level analysis is the way.
+
+I suggest not to solve it "manualy". But wait, it gives you the wrong answer?
+
+Check the function's XREFs

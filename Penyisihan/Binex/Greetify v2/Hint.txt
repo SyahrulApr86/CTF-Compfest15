@@ -1,0 +1,9 @@
+Take a closer look at readnline()
+
+4+4=8, no?
+
+Bothered by strlen() <= 9 constraint? Check this screenshot I took from https://man7.org/linux/man-pages/man3/printf.3.html  
+[img]
+You should be able to get 4 byte arbitrary write...
+
+5 seconds timeout is annoying? If you saw my previous hint, you should be able to get 4 byte arbitrary write, right? 4 byte write may be too slow in some cases, but if you are able to write 4 bytes, why can't you write less bytes?

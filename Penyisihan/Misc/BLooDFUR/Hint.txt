@@ -1,0 +1,1 @@
+every file is a 3x3 matrix representing sides of a rubik's cube
