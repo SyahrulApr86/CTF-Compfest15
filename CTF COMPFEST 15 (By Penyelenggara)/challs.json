@@ -1,0 +1,441 @@
+{
+    "data": {
+        "Binary Exploitation": [
+            {
+                "category": "Binary Exploitation",
+                "description": "The program that will send messages to your loved ones \ud83d\udda4\r\n\r\n`nc 34.101.122.7 10001`\r\n\r\n**Author: Lychnobyte**",
+                "files": [
+                    "/files/d4a7f1d7ef83977d60967b9283081588/chall?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDB9.ZPQ9cA.upDehqPwaVVadBWX9JvNhUFRU0Q",
+                    "/files/85ac0168db227bf29184b7adc8fa3371/ld-linux-x86-64.so.2?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDF9.ZPQ9cA.LVPA9Km0MPr6EefGljGhsGDHb0c",
+                    "/files/16fbcae8dd7c7cb71014fa2dd4dd941b/libc.so.6?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDJ9.ZPQ9cA.7m1kSo5U6A__nM6hozdgoIJv5r8"
+                ],
+                "hints": [
+                    "ret2csu"
+                ],
+                "id": 30,
+                "name": "SMS",
+                "points": 498,
+                "solves": 5
+            },
+            {
+                "category": "Binary Exploitation",
+                "description": "A well-written regular calculating program, it should have no other function than counting. Unless you prove me wrong!\r\n\r\n`nc 34.101.122.7 10002`\r\n\r\n**Author: Lychnobyte**",
+                "files": [
+                    "/files/f3bab703149564c74eb14dde0cc62fca/libc.so.6?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6MzZ9.ZPQ9cA.35_iKkUReniDCKngdQovnnMrGPg",
+                    "/files/4305643097e63b10976588216df1cbe9/ld-linux-x86-64.so.2?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6Mzd9.ZPQ9cA.WNWrehAZtzjXsFXIaJceeiDFcuc",
+                    "/files/2a0cfe4a78492492d42d4e95a0f9e33d/chall?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6Mzh9.ZPQ9cA.bWOGPOfLsNMr6UkDDlYruEzPGaE"
+                ],
+                "hints": [
+                    "OOB"
+                ],
+                "id": 28,
+                "name": "Calculator",
+                "points": 500,
+                "solves": 1
+            },
+            {
+                "category": "Binary Exploitation",
+                "description": "Because I'm feeling lonely, I created an application to greet me once again. However, I realized that I'm not the only one who is feeling lonely, so I modified it to be able to greet anyone. Nevertheless, I'm unsure about its safety. Could you please help me check it?\r\n\r\n**P.S: Due to limitations on my server, each session is restricted to a duration of 5 seconds \u2639\ufe0f (to simulate this behavior, run the binary with this command: `timeout 5 ./chall`)**\r\n\r\n`nc 34.101.122.7 10000`\r\n\r\n**Author: NeoZap**",
+                "files": [
+                    "/files/77ce93f78df37595873ebbc825ded04f/chall?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6Mzl9.ZPQ9cA.0HN4Ay60XocyeKNEn6nKl4nxoKA"
+                ],
+                "hints": [
+                    "Take a closer look at `readnline()`",
+                    "4+4=8, no?",
+                    "Bothered by `strlen() <= 9` constraint? Check this screenshot I took from https://man7.org/linux/man-pages/man3/printf.3.html\n![](https://cdn.discordapp.com/attachments/1120336314361991182/1147501598587764806/image.png)\nYou should be able to get 4 byte arbitrary write...",
+                    "5 seconds timeout is annoying? If you saw my previous hint, you should be able to get 4 byte arbitrary write, right? \n4 byte write may be too slow in some cases, but if you are able to write 4 bytes, why can't you write **less** bytes?"
+                ],
+                "id": 29,
+                "name": "Greetify v2",
+                "points": 500,
+                "solves": 0
+            },
+            {
+                "category": "Binary Exploitation",
+                "description": "You are a new and aspiring shop worker at COMPFEST Shop, a shop owned by COMPFEST Company. Upon arriving at the shop to begin your first day working, you met a mysterious figure. Looks like they want to say something to you, go on and listen to them!\r\n\r\n`nc 34.101.122.7 10003`\r\n\r\n**Author: NeoZap**",
+                "files": [
+                    "/files/19ba37c5f912d4a626fe7cffd5b8dbf5/chall?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDN9.ZPQ9cA.b05CVqn3yIlhpr_lLOz3rML2ah4",
+                    "/files/cc9ab138dc3a8b033411bc29c4005152/ld-linux-x86-64.so.2?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDR9.ZPQ9cA.vZpbhuAJnkwXPLIS0n2CPhkxSTc",
+                    "/files/7a6d9e003cc0bc79e06374133e448552/libc.so.6?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDV9.ZPQ9cA.o7OO-E3DLhRXtEpuC--6oUChMrE"
+                ],
+                "hints": [
+                    "FSOP"
+                ],
+                "id": 31,
+                "name": "Working at COMPFEST Shop",
+                "points": 500,
+                "solves": 2
+            }
+        ],
+        "Cryptography": [
+            {
+                "category": "Cryptography",
+                "description": "One day swusjask woke up and decided to be cryptography researcher. Suddenly, he came up with mind that he want to create some encryption scheme like RSA.\r\nRSA is widely known and used as cryptography encryption scheme and work in ![equation](https://latex.codecogs.com/png.latex?%5Cbg_white%20%7BZ%7D_n) under multiplication. So he came up with mind that \"Why I not make encryption scheme more complicated to improve security\". So he decided to make encryption scheme under ![equation](https://latex.codecogs.com/png.latex?%5Cbg_white%20%7BZ%7D_n%20%5Ctimes%20%7BZ%7D_n) with own defined multiplication operation. But, the problem is he forgot to make decryption scheme \ud83d\ude14.\r\n\r\n**Author: swusjask**",
+                "files": [
+                    "/files/fb60b2886c6e43be73a31d8af17e2020/chall.py?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDd9.ZPQ9cA.3CP5eNAHkefRrICunG0PbQtAUkY",
+                    "/files/e47a2f0d9f71d3b0afdce06654306ca6/flag.enc?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDh9.ZPQ9cA.AdoZSN9AkySuXmpGxDOc67Vg0_A"
+                ],
+                "hints": [
+                    "Like RSA, the key behind decryption is to find order of group. Can you find it?",
+                    "consider isomorphism (mapping) between this group and multiplicative group modulo polynomial with degree 2 and deduce the order",
+                    "![png.png](/files/3d47c8e4e2fa6e3ebc3d0da0704e1103/png.png)"
+                ],
+                "id": 33,
+                "name": "Swusjask Encryption",
+                "points": 500,
+                "solves": 3
+            },
+            {
+                "category": "Cryptography",
+                "description": "f0xie is building a vault to store his crypto wallet. He is using ECDSA as the authentication method since he recently learned ECDSA is super-secure. little did he know ECDSA implementation is super tricky. Can you break it?`\r\n\r\n**Author: fahrul**",
+                "files": [
+                    "/files/a0bb0d21a4d0e71843656e4f59bfe560/main.py?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NTF9.ZPQ9cA.LG3Z6nTJA1JbqBqKq0CURbq-72c"
+                ],
+                "hints": [
+                    "Hmmm.... Why does the form and the API doesn't match?",
+                    "Wait, there is something different compared to the standard ECDSA verification.",
+                    "you can sign without hash",
+                    "This vuln is usually mentioned in a lot of ECDSA package specially cryptocurrency related one"
+                ],
+                "id": 35,
+                "name": "CryptoVault",
+                "points": 499,
+                "solves": 3
+            },
+            {
+                "category": "Cryptography",
+                "description": "I have tried to encrypt my data but mistakenly I forgot to output the public key.\r\n\r\n**Author: swusjask**",
+                "files": [
+                    "/files/aeaad130a38c8774850dadef3f490afd/chall.py?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDl9.ZPQ9cA.2y2ipJUTFjP1QwABzdiOPY_ctzQ",
+                    "/files/85fa8418b49adffdad340b5bed4c832e/output.txt?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NTB9.ZPQ9cA.gn-gKXSyTydT-VZQsLT6Wo7wqJE"
+                ],
+                "hints": [
+                    "you can recover public key first with solving system of linear equation"
+                ],
+                "id": 34,
+                "name": "knapsack",
+                "points": 500,
+                "solves": 1
+            },
+            {
+                "category": "Cryptography",
+                "description": "Not CTF cryptography challenge if there is not RSA challenge, so here is little fun RSA challenge for you. Good Luck\r\n\r\n`nc 34.101.122.7 10004`\r\n\r\n**Author: swusjask**",
+                "files": [
+                    "/files/9f6fcc97ceb0505ccd13e5b68197a9eb/chall.py?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NDZ9.ZPQ9cA.d77FsA-ja2poPVkguw4AEyu_oGQ"
+                ],
+                "hints": [
+                    "first recover n. if you have a = b (mod n), then you have n | a - b. try using gcd and get n.",
+                    "![equation](https://latex.codecogs.com/png.image?\\dpi{110}\\bg{white}m^{ab}\\equiv(m^a)^b\\mod&space;n)"
+                ],
+                "id": 32,
+                "name": "choose exponent",
+                "points": 488,
+                "solves": 10
+            }
+        ],
+        "Forensics": [
+            {
+                "category": "Forensics",
+                "description": "Dear IT guy, I have suspicions that our graphic designer intern is stealing confidential documents and sending them to our competitor. I have sent her PC's memory dump to analyze.\r\n\r\nAttachment: https://drive.google.com/file/d/18u8OSCejwV5Wo7Ezh7NLlVpuhkMQbw4d/view?usp=sharing\r\n\r\n**Author: k3ng**",
+                "files": [],
+                "hints": [
+                    "8335370",
+                    "\"Someone is using mspaint.exe for graphic design? That's definitely the intern\""
+                ],
+                "id": 36,
+                "name": "industrialspy",
+                "points": 416,
+                "solves": 20
+            },
+            {
+                "category": "Forensics",
+                "description": "https://youtu.be/aR2iuxfJMOE\r\n\r\n**Author: Synchx**",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 42,
+                "name": "cloud cheating",
+                "points": 477,
+                "solves": 11
+            },
+            {
+                "category": "Forensics",
+                "description": "Someone in my house seems to be doing something fishy again\u2026 Maybe this time I will investigate. I\u2019ve tapped into the connection of said person\u2019s internet, perhaps you could help me find what they\u2019re doing?\r\n\r\nThe (compiled) code and docker files required to run the set up locally are provided.\r\n\r\nTo deploy locally, simply run `docker compose up --build -d`. You can go to http://localhost:444/ to access the site.\r\n\r\nExample usage of the website: [Video](https://cdn.discordapp.com/attachments/1147374328732713000/1147388640805261392/simplescreenrecorder-2023-09-02_11.31.52.mp4)\r\n\r\nNOTE: Use `chall-olddocker.zip` if you use docker 20, if you have newer version, `chall.zip` should work just fine.\r\n\r\n**Author: rorre**",
+                "files": [
+                    "/files/9de2473f254bb30d6e53512174f43371/catdog.pcapng?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NTd9.ZPQ9cA.DkAuFm-_fLefAEIZqI3PuPBqfsQ",
+                    "/files/2cbae4a5b9b5ead7842fef9f1c09ace5/chall.zip?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NTh9.ZPQ9cA.oirc3P94CKeZzeRYW3ZAiFPtkUI",
+                    "/files/0bd948c9844e434c769fb8987580d454/chall-olddocker.zip?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6Njl9.ZPQ9cA.Mn908vp4EooHZHpdgFUfJ4B70v0"
+                ],
+                "hints": [
+                    "Browser's devtools is an amazing tool. Maybe look at the source and network tab to figure things out?",
+                    "Try looking at the lifecycle of the chat, it's also using a common cryptography technique in CTF challenges."
+                ],
+                "id": 44,
+                "name": "E2EBleed",
+                "points": 495,
+                "solves": 7
+            },
+            {
+                "category": "Forensics",
+                "description": "My friend loves to send me memes that has cats in it! One day, he sent me another cat meme from his 4-bit computer, this time with \u201ca secret\u201d, he said. Unfortunately, he didn\u2019t know sending the meme from his 4-bit computer sorta altered the image. Can you help me repair the image and find the secret?\r\n\r\n**Author: notnot**",
+                "files": [
+                    "/files/f5cc43806ca49a31603c69807bac1d74/cat.png?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NTN9.ZPQ9cA.tEYKVTm3LUSH5uaHZUEyuz8k6Ak"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 43,
+                "name": "not simply corrupted",
+                "points": 316,
+                "solves": 32
+            }
+        ],
+        "Misc": [
+            {
+                "category": "Misc",
+                "description": "New semester has begun, this is a class room list for each day : https://bit.ly/spreadsheet-chall Wait.. why there is a flag page?\r\n\r\nFlag : COMPFEST15{flag}\r\n\r\n**Author: kilometer**",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 48,
+                "name": "classroom",
+                "points": 100,
+                "solves": 154
+            },
+            {
+                "category": "Misc",
+                "description": "john is currently planning an escape from jail. Fortunately, he got a snippet of the jail source code from his cellmate. Can you help john to escape?\r\n\r\n`nc 34.101.122.7 10008`\r\n\r\n**Author: k3ng**",
+                "files": [
+                    "/files/dfe847f3c25a226f4b3663adf64d114f/snippet.py?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NzJ9.ZPQ9cQ.iIdBAWbka6a4TDJ3pS77W6aoExc"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 45,
+                "name": "napi",
+                "points": 316,
+                "solves": 34
+            },
+            {
+                "category": "Misc",
+                "description": "Welcome to CTF COMPFEST 15! Want to get a first blood? Go to `#first-blood` channel and get it!",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 56,
+                "name": "Sanity Check",
+                "points": 25,
+                "solves": 166
+            },
+            {
+                "category": "Misc",
+                "description": "https://compfest.link/FeedbackQualsCTFCompfest15 ",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 57,
+                "name": "Feedback",
+                "points": 25,
+                "solves": 0
+            },
+            {
+                "category": "Misc",
+                "description": "yayayaya, you see i am a generous guy. im giving you free flag here since sharing is caring. oh i also included my notes which was written , or type-ed i'd rather say, using full-width japanese char in case you want to learn more about me. beautiful ain't it!\r\n\r\n**Note: Submit the flag you found as is.**\r\n\r\n**Author: Lily**",
+                "files": [
+                    "/files/1fed843a26860ed6b5ea97ff2289b88f/wibu?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NjB9.ZPQ9cQ.t4XMRthvN5lahLwewqNX8nwgdI0"
+                ],
+                "hints": [
+                    "Perhaps parsing the torrent will help you",
+                    "ever wonder which type of hash is used for the torrent pieces?",
+                    "\"bang, seriusan brute force kah? lama banget gak sih\" nggak kok, asal tau mana aja yang harus di brute force. kuncinya sabar mas, \"sabar\"",
+                    "You do know that each particular unicode charsets may have different size (in byte) right? right??"
+                ],
+                "id": 46,
+                "name": "sharing is caring",
+                "points": 499,
+                "solves": 2
+            },
+            {
+                "category": "Misc",
+                "description": "I actually wanted to make another challenge that starts with a \"Not\" but I ran out of ideas. Solve this instead :p\r\n\r\n**Author: notnot**",
+                "files": [
+                    "/files/3a6659683a2b101ebf8199cb1054c490/chall.zip?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NjF9.ZPQ9cQ.8KdsoGY-sjk3wUDSuWYiZnu_MGw"
+                ],
+                "hints": [
+                    "every file is a 3x3 matrix representing sides of a rubik's cube"
+                ],
+                "id": 47,
+                "name": "BLooDFUR",
+                "points": 500,
+                "solves": 0
+            },
+            {
+                "category": "Misc",
+                "description": "I'm developing an AI Waifu chatbot startup but i'm too lazy to host my own LLMs, So i just use chatGPT API, but first i need to hide my prompt since it's my only moat, can you help me pentesting this?\r\n\r\nthe bot is online as `lemond #8498` on the Discord server, but only talking in DMs. (Note: this challenge requires no automation. Please do not automate your Discord account as that is a violation of Discord's Terms of Service and may lead to the termination of your account)\r\n\r\nformat flag : COMPFEST15{flag_sha256(flag)[:10]} \r\n\r\n**Author: fahrul**",
+                "files": [
+                    "/files/70ec3ac54794b267ae56cff2e10da00d/main.py?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6Njh9.ZPQ9cQ.5ZaFzQcEDQ-nJs2AW9uLjTbPohY"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 55,
+                "name": "artificial secret",
+                "points": 356,
+                "solves": 28
+            }
+        ],
+        "OSINT": [
+            {
+                "category": "OSINT",
+                "description": "Hi, I am an HR on a retail company, Free Terracota. I need your help for find our lost flag that hidden by our Security Analysist, named Andi Hakim. Thank you for helping me!\r\n\r\n**Author: kilometer**",
+                "files": [],
+                "hints": [
+                    "-"
+                ],
+                "id": 50,
+                "name": "Panic HR",
+                "points": 100,
+                "solves": 56
+            },
+            {
+                "category": "OSINT",
+                "description": "That night was definitely the happiest of my life. I get to spend a night with my favorite girl, walking and strolling around the streets of Seoul, holding hands and enjoying the winter air with the beautiful night lights decorating our surroundings. Look, I even took a picture of her! Although, she was really camera-shy. What I don\u2019t really get is, my friends told me that all of this is just in my imaginations. I can assure you I did have a date with her. Otherwise, how would I take this picture?!\r\n\r\nAnyway, I organize my dating pictures by location. The problem is, I forgot the name of the street where I took this picture, specifically the street behind her. And the girl? Well, long story, but there\u2019s no way I can ask her. All I can remember is this location was near a Burberry store. I tried to look it up too, but the streets and buildings were pretty hard to recognize because the pictures on the internet were from 5 years ago.\r\n\r\nI know you can find the street location. So please help me, yeah? Also, sorry for the pixellated image!\r\n\r\nNOTE: Brute-force solutions in the writeups will not be considered valid.\r\n\r\nFlag format: COMPFEST15{StreetNameWithoutDash_DistrictName_BurberryStorePlusCode}\r\n\r\nExample: COMPFEST15{BanpoDaero_Geumjeong_RRXH+88}\r\n\r\n**Author: notnot**",
+                "files": [
+                    "/files/f6c16422d51f4f120810665dcf866506/ayang.jpg?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NjJ9.ZPQ9cQ.t6y3I-MlfwBZY4FeWI_0aiXy8Qw"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 49,
+                "name": "Not A CIA Test",
+                "points": 100,
+                "solves": 81
+            }
+        ],
+        "Reverse Engineering": [
+            {
+                "category": "Reverse Engineering",
+                "description": "Someone hacked my computer! I really need my important file but it's encrypted. The IT guy managed to recover one file. But I don\u2019t think that is my file though.\r\n\r\nWARNING: Do not run the pyc file unless you know what you are doing.\r\n\r\n**Author: k3ng**",
+                "files": [
+                    "/files/2083eea1609bd42639cea6489f23179b/hackedlol.pyc?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NjN9.ZPQ9cQ.c7O_Ko08AeU3EMg0ZpsPFdlleIg",
+                    "/files/223f0648ca50b3a668baed5637383818/important_file.hackedlol?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NjR9.ZPQ9cQ.P9N_A_XwjNWsVKv2kzX035oLRW8"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 51,
+                "name": "hackedlol",
+                "points": 257,
+                "solves": 40
+            },
+            {
+                "category": "Reverse Engineering",
+                "description": "I made my own language! It's very simple, yet effective in comparing things. It has turing machine like properties as well.\r\n\r\nHere are the instructions available, write in just like how you write assembly or script, its top to down:\r\n\r\n- `left <N>`, `right <N>`: Move the tape head to left or right by N\r\n- `store <STRING>`: Store string to from current head, the head will move right after the string\r\n- `print`: Print from head to next empty\r\n- `input`: Input from stdin and store it in current head, the head will move right after the string\r\n- `push`: Push current head to stack\r\n- `popeq <CHAR>`: Pop current stack, and compare the character with given char. If true, it will skip next instruction\r\n- `quit`: Exit\r\n\r\nExample for Hello World:\r\n```\r\nstore Hello World!\r\nleft 12\r\nprint\r\n```\r\n\r\nYou may write it the code in a `.kat` file, and you can compile it with the website. Then execute it\r\nwith `python run_katvm.py output.kb`.\r\n\r\nNOTE: You need to run it on Python 3.10\r\n\r\n**Author: rorre**",
+                "files": [
+                    "/files/4444b6b24d040d809b46c44cf8b0262e/check.kb?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NjZ9.ZPQ9cQ.ycJjsiWPzdIlP5nKLolan2B39xs",
+                    "/files/969e81d487421325db6104296bac6053/run_katvm.py?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6Njd9.ZPQ9cQ.DpRH2tBMwKEygZpIKDt_RetN6oQ"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 53,
+                "name": "KatVM",
+                "points": 488,
+                "solves": 8
+            },
+            {
+                "category": "Reverse Engineering",
+                "description": "![image](https://cdn.discordapp.com/attachments/881129085403811840/1146005218723627028/220px-Nardwuar_2019_SC.png)\r\n\r\n**Author: ivanox**",
+                "files": [
+                    "/files/857723aac7025d81a6379df16d307ed5/chall.apk?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NzB9.ZPQ9cQ.O6N4rtVgRXcBo8qQE10RAHSwfgM"
+                ],
+                "hints": [
+                    "Well, have you analyze the \"output\"?"
+                ],
+                "id": 54,
+                "name": "GoDroid",
+                "points": 499,
+                "solves": 4
+            },
+            {
+                "category": "Reverse Engineering",
+                "description": "Just a simple flag validator machine.\r\n\r\n> Wrap the flag with `COMPFEST15{}`\r\n\r\n**Author: ivanox**",
+                "files": [
+                    "/files/3a1055a156752c51b5478dcebf29e72f/chall?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NjV9.ZPQ9cQ.1N9bW620weyCT0XvakqhIJPQJjc"
+                ],
+                "hints": [
+                    "Don't rely too much on decompiler. Sometimes, low-level analysis is the way.",
+                    "I suggest not to solve it \"manualy\". But wait, it gives you the wrong answer?",
+                    "Check the function's XREFs"
+                ],
+                "id": 52,
+                "name": "Validator Machine",
+                "points": 500,
+                "solves": 1
+            }
+        ],
+        "Web Exploitation": [
+            {
+                "category": "Web Exploitation",
+                "description": "Okay, okay! People still say the framework adds a lot of overhead, thus making it slow. So now I\u2019ve written the entire stack myself, what about now, huh?! (I removed the C dependency though)\r\n\r\nFlag is in `/flag`\r\n\r\n**Author: rorre**",
+                "files": [
+                    "/files/28a853b2fb7a1efacc044ca0d17bf7a5/chall.zip?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NTZ9.ZPQ9cQ.ZMzkZHj6UcPDk1-0dRz50NtqJKg"
+                ],
+                "hints": [
+                    "The HTTP spec says that we may not fully trust the client's headers, one of them just so happen to cause side effects due to faulty implementation, what's this header?",
+                    "Does the server already adhere to this spec? https://httpwg.org/specs/rfc9110.html#field.content-length"
+                ],
+                "id": 37,
+                "name": "Read Around",
+                "points": 481,
+                "solves": 11
+            },
+            {
+                "category": "Web Exploitation",
+                "description": "I love Next.js 13! The server actions and components is very cool! It looks just like back then when I was writing PHP!\r\n\r\n**Author: rorre**",
+                "files": [
+                    "/files/add422121bf39a9f1326c6043e2b37f4/indexphpts.zip?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NzF9.ZPQ9cQ.6bwNItfZn7_eIuUjCG2JnU7KzsE"
+                ],
+                "hints": [
+                    "Just because its not showing, doesn't mean you can't trigger it. React DevTools might help you figure out hidden code. Use the browser's capabilities to its full extent."
+                ],
+                "id": 39,
+                "name": "indexphpts",
+                "points": 488,
+                "solves": 9
+            },
+            {
+                "category": "Web Exploitation",
+                "description": "Obligatory pastebin clone. But people said that Python is slow, so I made the I/O in C! Now it is blazingly fast!\r\n\r\n**Author: rorre**",
+                "files": [],
+                "hints": [
+                    "```\n/app/files # ls B1NHZ27SVYV6IJQMD25OT6Y4BPGQ9UID.txt flag*\nB1NHZ27SVYV6IJQMD25OT6Y4BPGQ9UID.txt  flag                                  flag.txt\n/app/files # \n```"
+                ],
+                "id": 40,
+                "name": "COMPaste",
+                "points": 408,
+                "solves": 24
+            },
+            {
+                "category": "Web Exploitation",
+                "description": "everyone says i am a bad programmer. Hmph!, let me show you my highly secured web app.\r\n\r\n**Author: Lily**",
+                "files": [
+                    "/files/a3d34f4c5420b86de47b3fea0ba90c9f/src.zip?token=eyJ1c2VyX2lkIjo1MjQsInRlYW1faWQiOjE0NywiZmlsZV9pZCI6NTV9.ZPQ9cQ.VyWiWZ0E3H93bE8OAIjQyxfOUBc"
+                ],
+                "hints": [
+                    "-"
+                ],
+                "id": 38,
+                "name": "noobgramer",
+                "points": 495,
+                "solves": 7
+            }
+        ]
+    },
+    "title": "CTF COMPFEST 15",
+    "url": "https://ctf.compfest.id"
+}
